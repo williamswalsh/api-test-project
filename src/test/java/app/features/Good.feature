@@ -94,6 +94,9 @@ Feature: Test with good practices
     Then status 201
     And assert responseTime < 1000
 
+#    Can partial match a sub-object of the response
+#And match response.dimensions contains { width: '#number' }
+
 # Using concat in template expression
 #* configure headers = { Authorization: '#(token + time + demoBaseUrl)' }
 
