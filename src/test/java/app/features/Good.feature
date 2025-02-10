@@ -21,6 +21,7 @@ Feature: Test with good practices
     Then status 200
     And match response contains { price: '#number', title:  '#notnull'}
     And match response.meta.createdAt == "#regex \\d{4}-\\d{2}-\\d{2}.*"
+    And match each response.tags == '#notnull'
     * print "Product 1: " + karate.pretty(response)
 
   Scenario: Add a basic product, assert json response
@@ -101,6 +102,7 @@ Feature: Test with good practices
 #    # example of how to check that a cookie does NOT exist
 #    And match responseCookies !contains { blah: '#notnull' }
 
+#
 # And match each response.items == {id: '#number', value: '#string', date: '#regex [0-3]-\\d-2[0-2]\\d{2}'
 
 #  url encoded form
