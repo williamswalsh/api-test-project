@@ -17,10 +17,5 @@ function fn() {
     config.userPassword = "myDiff23";
   }
 
-
-  // TODO: Could use this for AUTH token
-  // var authToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
-  // karate.configure('headers', {Authorization: 'Token ' + authToken})
-
   return config;
 }

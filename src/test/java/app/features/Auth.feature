@@ -1,3 +1,4 @@
+@ignore
 Feature: Authentication
 
   Scenario: Get auth token
@@ -5,7 +6,7 @@ Feature: Authentication
     And path '/auth/login'
     And header content-type = 'application/json'
     And header accept = 'application/json'
-    And request { username:  '#(userName)', password:  '#(password)', expiresInMins:  '#(expiresInMins)'}
+    And request { username:  '#(userName)', password:  '#(password)', expiresInMins:  '#(expiresInMins)' }
     When method post
     Then status 200
     * def accessToken = response.accessToken

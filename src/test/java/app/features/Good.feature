@@ -1,8 +1,9 @@
+#@ignore
 Feature: Test with good practices
 
   Background: Use token from another feature
     * url 'https://dummyjson.com'
-    * def output = callonce read('classpath:app/features/Auth.feature') { "userName": "emilys", "password": "emilyspass", expiresInMins: 30 }
+    * def output = callonce read('classpath:app/features/Auth.feature') { "userName": "sophiab", "password": "sophiabpass", expiresInMins: 30 }
     * def token = output.accessToken
     * configure logPrettyRequest = true
     * configure logPrettyResponse = true
@@ -93,6 +94,9 @@ Feature: Test with good practices
     When request createProductJson
     Then status 201
     And assert responseTime < 1000
+
+
+#  #string, #number, #ignore,
 
 #    Can partial match a sub-object of the response
 #And match response.dimensions contains { width: '#number' }

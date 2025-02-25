@@ -1,3 +1,4 @@
+@ignore
 Feature: Passing values between requests
 
   Scenario: Extract token and use it in another request

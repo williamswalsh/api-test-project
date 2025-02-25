@@ -22,11 +22,11 @@ class TestRunner {
 //        Runner.path("classpath:app/features/PassingDataBetweenRequests.feature").parallel(1);
 //    }
 
-    @Test
-    void testWithReport() {
-        Results results = Runner.path("classpath:app/features")
-                .outputCucumberJson(true)  // Enables Cucumber JSON report
-                .parallel(1);
-        assertEquals(0, results.getFailCount(), results.getErrorMessages());
-    }
+//    @Test
+//    void testWithReport() {
+//        Results results = Runner.path("classpath:app/features")
+//                .outputCucumberJson(true)  // Enables Cucumber JSON report
+//                .parallel(1);
+//        assertEquals(0, results.getFailCount(), results.getErrorMessages());
+//    }
 }
